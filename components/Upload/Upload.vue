@@ -1,5 +1,5 @@
 <template lang="html">
-    <div class="block" style="left:0;">
+    <div class="block">
         <div class="block-head">{{ $t("title.seed") }}</div>
         <div class="block-body">
             <div v-if="up.visible">

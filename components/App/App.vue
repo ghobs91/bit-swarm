@@ -8,7 +8,6 @@
         <panel @upload="onUpload" @download="onDownload" @nSuccess="nSuccess" @nWarning="nWarning"></panel>
         <speed></speed>
         <div class="blocks">
-            <upload :up="up"></upload>
             <download :down="down"></download>
         </div>
         <notice :notification="notification"></notice>

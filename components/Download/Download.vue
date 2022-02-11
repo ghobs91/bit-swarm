@@ -1,5 +1,5 @@
 <template lang="html">
-    <div class="block" style="right:0;">
+    <div class="block">
         <div class="block-head">{{ $t("title.down") }}</div>
         <div class="block-body" >
             <div v-if="down.visible">

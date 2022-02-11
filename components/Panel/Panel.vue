@@ -1,16 +1,9 @@
 <template lang="html">
     <div class="panel">
-        <div class="left">
-            <input id="file-upload" type="file" @change="upload($event)">
-            <label class="btn" for="file-upload"><i class="ion-android-upload"></i>{{ $t("btn.seed") }}</label>
-        </div>
         <div class="right">
             <input class="ipt" type="text" :placeholder="$t('text.magnet')" v-model="magnetUrlDown">
             <label class="btn" @click="download">
                 <i class="ion-android-download"></i>{{ $t("btn.down") }}
-            </label>
-            <label class="btn" @click="recently">
-                <i class="ion-android-stopwatch"></i>{{ $t("btn.recently") }}
             </label>
         </div>
         <div class="recents" v-if="recents.visible">
