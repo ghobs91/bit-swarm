@@ -3,7 +3,7 @@
     "background_color": "#181a1b",
     "display": "browser",
     "scope": "/",
-    "start_url": "www.bitswarm.xyz",
+    "start_url": "https://bitswarm.netlify.app/",
     "name": "BitSwarm - Online and offline browser torrent client",
     "short_name": "BitSwarm",
     "description": "Online and offline browser torrent client",
