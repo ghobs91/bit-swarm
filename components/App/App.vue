@@ -23,8 +23,10 @@ import upload from '../Upload/Upload.vue'
 import download from '../Download/Download.vue'
 import notice from '../Notice/Notice.vue'
 import footline from '../Footer/Footer.vue'
+import axios from 'axios';
 
 export default {
+    
     data() {
         return {
             loader: true,
@@ -47,6 +49,14 @@ export default {
         footline
     },
     mounted: function () {
+        axios.get("http://localhost:3000/torrentsearch", { params: { query: 'the simpsons' } })
+        .then(response => {
+            this.BLOG = response.data;
+            console.log(this.BLOG)
+        })
+        .catch(error => {
+            alert(error)
+        })
         this.loader = false
     },
     methods: {
