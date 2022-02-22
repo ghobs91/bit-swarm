@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
 const TorrentSearchApi = require('torrent-search-api');
+const port = process.env.PORT || 3000;
 
 TorrentSearchApi.enableProvider('ThePirateBay');
 
@@ -20,5 +20,10 @@ app.get('/api/torrentsearch/', (req, res) => {
     res.send(response)
 })
 
+app.get('/about', (req, res) => res.send('About Page Route'));
+app.get('/portfolio', (req, res) => res.send('Portfolio Page Route'));
+app.get('/contact', (req, res) => res.send('Contact Page Route'));
+
 app.listen(port, () => console.log(`Server running on ${port}, http://localhost:${port}`));
+
 module.exports = app
