@@ -49,7 +49,7 @@ export default {
         footline
     },
     mounted: function () {
-        axios.get("http://localhost:3000/torrentsearch", { params: { query: 'the simpsons' } })
+        axios.get("http://localhost:3000/api/torrentsearch", { params: { query: 'the simpsons' } })
         .then(response => {
             this.BLOG = response.data;
             console.log(this.BLOG)

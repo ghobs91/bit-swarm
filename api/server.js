@@ -12,7 +12,7 @@ var torrentSearch = async function(query) {
     return torrents;
   }
 
-app.get('/torrentsearch/', (req, res) => {
+app.get('/api/torrentsearch/', (req, res) => {
     console.log('the req.query.query is: ', req.query.query)
     const response = torrentSearch(req.query.query);
     res.send(response)
